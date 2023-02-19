@@ -8,7 +8,7 @@ int main(void)
 {
 int c, i, j, k;
 
-for(c = 48; c <= 57; c++)
+for (c = 48; c <= 57; c++)
 {
 for (i = 48; i <= 57; i++)
 {
@@ -22,13 +22,13 @@ putchar(' ');
 putchar(j);
 putchar(k);
 
-if ( c + i + j + k == 227 && c == 57)
+if (c + i + j + k == 227 && c == 57)
 {
 break;
 }
 else
 {
-putchar(';');
+putchar(',');
 putchar(' ');
 }
 }
