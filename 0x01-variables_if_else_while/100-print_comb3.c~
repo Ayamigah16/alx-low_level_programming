@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <unistd.h>
+/**
+ * main -Entry point
+ * Description - print two digits combination
+ * Return: 0 Success
+ */
+int main(void)
+{
+int c, i;
+
+ for (c = 'c'; c <= '9'; 
