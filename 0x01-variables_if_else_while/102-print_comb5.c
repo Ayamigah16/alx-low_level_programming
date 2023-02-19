@@ -16,6 +16,8 @@ for (j = 48; j <= 57; j++)
 {
 for (k = 48; k <= 57; k++)
 {
+if (((j + k) > (c + i) && k >= c) || c < k)
+{
 putchar(c);
 putchar(i);
 putchar(' ');
@@ -30,6 +32,7 @@ else
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
