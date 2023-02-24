@@ -15,7 +15,7 @@ unsigned long int bef2;
 unsigned long int aft1;
 unsigned long int aft2;
 
-print("%lu", bef);
+printf("%lu", bef);
 
 for (i = 1; i < 91; i++)
 {
@@ -39,5 +39,5 @@ aft2 = aft2 + bef2;
 bef2 = aft2 - bef2;
     }
 printf("\n");
-return(0);
+return (0);
 }
