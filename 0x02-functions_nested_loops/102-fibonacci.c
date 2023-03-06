@@ -19,7 +19,7 @@ fib2 = sum;
 
 if (count == 49)
 {
-printf('\n');
+printf("\n");
 }
 else
 {
