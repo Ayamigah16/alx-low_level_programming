@@ -17,6 +17,6 @@ unsigned char *memory = s, value = c;
 for (index = 0; index < n; index++)
 {
 memory[index] = value;
-    }
+}
 return (memory);
 }
