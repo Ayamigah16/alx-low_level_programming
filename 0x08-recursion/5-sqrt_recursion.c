@@ -4,6 +4,7 @@
  * _sqrt_recursion - Returns the natural square root of a number
  * _get_sqrt - Finds the natural square root of the number inputed
  * @n: The number to find its natura square root
+ * @i: The integer to check if it's the square root of n
  * Return: Always return the natural square root of @n
  */
 
@@ -23,6 +24,15 @@ else
 return (_get_sqrt(n, 1));
 }
 }
+
+
+/**
+ * _get_sqrt - Finds the natural square root of the number inputed
+ * @n: The number to find its natural square root
+ * @i: The integer to check if it's the square root of n
+ *
+ * Return: Always return the natural square root of @n
+ */
 
 int _get_sqrt(int n, int i)
 {

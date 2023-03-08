@@ -16,7 +16,7 @@ return (-1);
 }
 else if (y == 0)
 {
-return (x);
+return (1);
 }
 else
 {
