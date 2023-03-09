@@ -21,17 +21,18 @@ if (*s2 == '*')
 {
 /* Skip the * in s2 */
 s2++;
-/* Try all possible matches of s1 with the rest of s2 */
-while (*s1 != '\0')
-{
-if (wildcmp(s1, s2))
+/* If s2 is now empty, it matches any string */
+if (*s2 == '\0')
 {
 return (1);
 }
-s1++;
+/* Try all possible matches of s1 with the rest of s2 */
+if (*s1 != '\0' && wildcmp(s1 + 1, s2))
+{
+return (1);
 }
 /* If there is no match, the strings are not identical */
-return (0);
+return (wildcmp(s1, s2));
 }
 
 /* If the current character of s2 is not *, compare it with s1 */
@@ -40,5 +41,6 @@ if (*s1 != '\0' && (*s1 == *s2 || *s2 == '?'))
 return (wildcmp(s1 + 1, s2 + 1));
 }
 
+/* If none of the above cases match, the strings are not identical */
 return (0);
 }
