@@ -15,7 +15,6 @@ if (*s1 == '\0' && *s2 == '\0')
 {
 return (1);
 }
-
 /* If the current character of s2 is *, try all possible matches with s1 */
 if (*s2 == '*')
 {
@@ -31,12 +30,10 @@ return ((*s1 == '\0' && *s2 != '\0') ? 0 :
 (wildcmp(s1 + ((*s1 == *s2 || *s2 == '?') ? 1 : 0), s2) ||
 wildcmp(s1, s2 + 1)));
 }
-
 /* If the current character of s2 is not *, compare it with s1 */
 if (*s1 == '\0' || (*s1 != *s2 && *s2 != '?'))
 {
 return (0);
 }
- 
 return (wildcmp(s1 + 1, s2 + 1));
 }
