@@ -49,7 +49,7 @@ if (str[i] == ' ' || str[i] == '\0')
 if (c)
 {
 end = i;
-tmp = (char *) malloc(sizeof(char) * (c + 1);
+tmp = (char *) malloc(sizeof(char) * (c + 1));
 if (tmp == NULL)
 {return (NULL); }
 while (start < end)
@@ -60,6 +60,7 @@ while (start < end)
 matrix[k] = tmp - c;
 k++;
 c = 0;
+}
 }
 }
 else if (c++ == 0)
