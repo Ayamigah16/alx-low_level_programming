@@ -23,5 +23,4 @@ else if (count)
 
 if (!count)
 {_putchar('0'); }
- 
 }
