@@ -1,0 +1,8 @@
+import dis
+
+with open("crackme4", "rb") as f:
+    code = f.read()
+
+instructions = dis.Bytecode(code)
+for instr in instructions:
+    print(instr)
