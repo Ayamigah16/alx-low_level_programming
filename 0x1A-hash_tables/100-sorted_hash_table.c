@@ -4,11 +4,13 @@
 #include "hash_tables.h"
 
 /**
- * add_node_sorted - Inserts a new node into a sorted linked list in a hash table.
+ * add_node_sorted - Inserts a new node into a sorted linked
+ * list in a hash table.
  * @ht: A pointer to the sorted hash table.
  * @new_node: A pointer to the new node to be inserted.
  *
- * Return: 0 if the operation fails (e.g., memory allocation issues), 1 otherwise.
+ * Return: 0 if the operation fails (e.g., memory allocation
+ * issues), 1 otherwise.
  */
 int add_node_sorted(shash_table_t *ht, shash_node_t *new_node);
 
@@ -17,7 +19,8 @@ int add_node_sorted(shash_table_t *ht, shash_node_t *new_node);
  * shash_table_create - Creates a sorted hash table.
  * @size: The size of the array.
  *
- * Return: A pointer to the newly created sorted hash table, or NULL on failure.
+ * Return: A pointer to the newly created sorted hash
+ * table, or NULL on failure.
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
@@ -52,7 +55,8 @@ return (new_table);
  *
  * Return: 1 if it succeeded, 0 otherwise.
  */
-int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+int shash_table_set(shash_table_t *ht, const char *key,
+		    const char *value)
 {
 shash_node_t *new_node, *tmp;
 unsigned long int index;
@@ -153,11 +157,13 @@ return (1);
 }
 
 /**
- * shash_table_get - Retrieves the value associated with a key in a sorted hash table.
+ * shash_table_get - Retrieves the value associated
+ * with a key in a sorted hash table.
  * @ht: The sorted hash table to search.
  * @key: The key to search for.
  *
- * Return: The value associated with the key, or NULL if key couldn't be found.
+ * Return: The value associated with the key, or
+ * NULL if key couldn't be found.
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
@@ -179,7 +185,8 @@ return (NULL);
 }
 
 /**
- * shash_table_print - Prints the sorted hash table using the sorted linked list.
+ * shash_table_print - Prints the sorted hash table using
+ * the sorted linked list.
  * @ht: The sorted hash table to print.
  */
 void shash_table_print(const shash_table_t *ht)
@@ -204,7 +211,8 @@ printf("}\n");
 }
 
 /**
- * shash_table_print_rev - Prints the sorted hash table in reverse order using the sorted linked list.
+ * shash_table_print_rev - Prints the sorted hash table in reverse
+ * order using the sorted linked list.
  * @ht: The sorted hash table to print.
  */
 void shash_table_print_rev(const shash_table_t *ht)
