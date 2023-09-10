@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 = hash function implementing the dijb2 algorithm
- * @str = string used to generate the hash value
+ * hash_djb2 - hash function implementing the dijb2 algorithm
+ * @str: string used to generate the hash value
  * Rerurn: hash value
 */
 unsigned long int hash_djb2(const unsigned char *str)
