@@ -94,6 +94,7 @@ void hash_table_delete(hash_table_t *ht);
 shash_table_t *shash_table_create(unsigned long int size);
 /* Task 8 - function that creates a sorted hash table. */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+int add_node_sorted(shash_table_t *ht, shash_node_t *new_node);
 /* Task 9 - function that retrieves a value associated with a key. */
 char *shash_table_get(const shash_table_t *ht, const char *key);
 /* Task 10 - function that prints a hash table. */
