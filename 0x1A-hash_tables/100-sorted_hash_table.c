@@ -4,25 +4,26 @@
  * shash_table_create - Creates a sorted hash table.
  * @size: The size of the array.
  *
- * Return: A pointer to the newly created sorted hash table, or NULL on failure.
+ * Return: A pointer to the newly created
+ sorted hash table, or NULL on failure.
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
 shash_table_t *new_table = malloc(sizeof(shash_table_t));
 if (new_table == NULL)
 {
-return NULL;
+return (NULL);
 }
 new_table->size = size;
 new_table->array = calloc(size, sizeof(shash_node_t *));
 if (new_table->array == NULL)
 {
 free(new_table);
-return NULL;
+return (NULL);
 }
 new_table->shead = NULL;
 new_table->stail = NULL;
-return new_table;
+return (new_table);
 }
 
 /**
@@ -41,7 +42,7 @@ shash_node_t *tmp;
 unsigned long int index;
 if (ht == NULL || key == NULL || value == NULL)
 {
-return 0;
+return (0);
 }
 index = key_index((const unsigned char *)key, ht->size);
 node = ht->array[index];
@@ -53,29 +54,29 @@ free(node->value);
 node->value = strdup(value);
 if (node->value == NULL)
 {
-return 0;
+return (0);
 }
-return 1;
+return (1);
 }
 node = node->next;
 }
 new_node = malloc(sizeof(shash_node_t));
 if (new_node == NULL)
 {
-return 0;
+return (0);
 }
 new_node->key = strdup(key);
 if (new_node->key == NULL)
 {
 free(new_node);
-return 0;
+return (0);
 }
 new_node->value = strdup(value);
 if (new_node->value == NULL)
 {
 free(new_node->key);
 free(new_node);
-return 0;
+return (0);
 }
 new_node->next = ht->array[index];
 ht->array[index] = new_node;
@@ -109,7 +110,7 @@ tmp->snext->sprev = new_node;
 tmp->snext = new_node;
 new_node->sprev = tmp;
 }
-return 1;
+return (1);
 }
 
 /**
@@ -125,7 +126,7 @@ unsigned long int index;
 shash_node_t *node;
 if (ht == NULL || key == NULL)
 {
-return NULL;
+return (NULL);
 }
 index = key_index((const unsigned char *)key, ht->size);
 node = ht->array[index];
@@ -133,11 +134,11 @@ while (node != NULL)
 {
 if (strcmp(node->key, key) == 0)
 {
-return node->value;
+return (node->value);
 }
 node = node->next;
 }
-return NULL;
+return (NULL);
 }
 
 /**
@@ -165,6 +166,10 @@ node = node->snext;
 printf("}\n");
 }
 
+/**
+ * shash_table_print_rev - Prints the sorted hash table in reverse
+ * @ht: The sorted hash table
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 shash_node_t *node;
