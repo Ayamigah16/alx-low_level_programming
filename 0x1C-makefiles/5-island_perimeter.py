@@ -30,6 +30,7 @@ def island_perimeter(grid):
 
     return perimeter
 
+
 if __name__ == "__main__":
     grid = [
         [0, 0, 0, 0, 0, 0],
