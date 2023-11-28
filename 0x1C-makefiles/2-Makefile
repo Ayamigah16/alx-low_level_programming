@@ -1,0 +1,19 @@
+# 2-Makefile
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+.PHONY: all clean
+
+clean:
+	rm -f $(OBJ) $(NAME)
