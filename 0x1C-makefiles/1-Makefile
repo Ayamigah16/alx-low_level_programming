@@ -1,0 +1,10 @@
+# 1-Makefile
+
+CC = gcc
+SRC = main.c school.c
+EXEC = school
+
+all:
+	$(CC) $(SRC) -o $(EXEC)
+
+.PHONY: all
