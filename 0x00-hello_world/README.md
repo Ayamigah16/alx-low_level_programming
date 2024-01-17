@@ -1,7 +1,7 @@
 # 0x00. C - Hello, World
 `C` `Shell`
 
-![C image](https://www.articlering.com/wp-content/uploads/2021/08/c-programming.png)
+<img src="https://www.articlering.com/wp-content/uploads/2021/08/c-programming.png" alt="Image Alt Text" width="300" height="200">
 
 ## Tasks
 
