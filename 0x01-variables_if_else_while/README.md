@@ -2,8 +2,7 @@
 `C`
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutiAkMJusI2Kbbu-MaNpUk4vv1Euo_eejADkM82o4N21-n1iT_R_XrVxk3USiuuJgoHk&usqp=CAU" alt="Image Alt Text" width="300" height="200">
-
-https://intranet.alxswe.com/rltoken/Dg4SuuP8gvRYnE54wktySg
+ 
 ## Tasks
 
 ### **0. Positive anything is better than negative nothing** :boom::boom:
@@ -14,42 +13,85 @@ https://intranet.alxswe.com/rltoken/Dg4SuuP8gvRYnE54wktySg
 * The variable n will store a different value every time you will run this program
 * You don’t have to understand what **rand**, **srand**, **RAND_MAX** do. Please do not touch this code
 * The output of the program should be
-
-* **File:** `0-preprocessor`
-    
-### ***1. Compiler** :butterfly::butterfly::raised_hands:
-
-- Write a script that compiles a C file but does not link.
-
-* The C file name will be saved in the variable **$CFILE**
-* The output file should be named the same as the C file, but with the extension .o instead of **.c**
+        The number, followed by
+        * if the number is greater than 0: **is positive**
+        * if the number is 0: **is zero**
+        * if the number is less than 0: **is negative**
+        followed by a new line
 
 ```
-julien@ubuntu:~/c/0x00$ export CFILE=main.c
-julien@ubuntu:~/c/0x00$ cat main.c
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-    return (0);
-}
-julien@ubuntu:~/c/0x00$ ./1-compiler 
-julien@ubuntu:~/c/0x00$ ls
-0-preprocessor  1-compiler   c            main.o
-Makefile               100-intel      main.c  main.s
-julien@ubuntu:~/c/0x00$ cat -v main.o | head
-^?ELF^B^A^A^@^@^@^@^@^@^@^@^@^A^@>^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P^B^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@@^@^K^@^H^@UHM-^IM-eM-8^@^@^@^@]M-C^@GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609^@^T^@^@^@^@^@^@^@^AzR^@^Ax^P^A^[^L^G^HM-^P^A^@^@^\^@^@^@^\^@^@^@^@^@^@^@^K^@^@^@^@A^N^PM-^F^BC^M^FF^L^G^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^D^@M-qM-^?^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^E^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^D^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^R^@^A^@^@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@main.c^@main^@^@^@^@ ^@^@^@^@^@^@^@^B^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@.symtab^@.strtab^@.shstrtab^@.text^@.data^@.bss^@.comment^@.note.GNU-stack^@.rela.eh_frame^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^[^@^@^@^A^@^@^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@!^@^@^@^A^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@'^@^@^@^H^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@,^@^@^@^A^@^@^@0^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@5^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@5^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@J^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@8^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@E^@^@^@^D^@^@^@@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M- ^A^@^@^@^@^@^@^X^@^@^@^@^@^@^@    ^@^@^@^F^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@^Q^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^A^@^@^@^@^@^@T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^@^@^@^@^@^@^@M-X^@^@^@^@^@^@^@
-^@^@^@^H^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@  ^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^P^A^@^@^@^@^@^@^M^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-positive_or_negative.c -o 0-positive_or_negative
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    -520693284 is negative
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    -973398895 is negative
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    -199220452 is negative
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    561319348 is positive
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    561319348 is positive
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    266853958 is positive
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    -48147767 is negative
+    julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+    0 is zero
+    julien@ubuntu:~/0x01$ 
 ```
 
-* **File:** `1-compiler`
+* **File:** `0-positive_or_negative.c`
     
-### **2. Assembler** :yum: :yum: :ok_hand:
+### **1. The last digit** :butterfly::butterfly::raised_hands:
+
+- This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n.
+
+* You can find the source code [here](https://intranet.alxswe.com/rltoken/rud8wr5x6VWeahUtd5P14A)
+* The variable n will store a different value every time you run this program
+* You don’t have to understand what **rand**, **srand**, **RAND_MAX** do. Please do not touch this code
+* The output of the program should be:
+    1. The string Last digit of, followed by
+    2. n, followed by
+    3. the string is, followed by
+        * if the last digit of n is greater than 5: the string and is greater than 5
+        * if the last digit of n is 0: the string and is 0
+        * if the last digit of n is less than 6 and not 0: the string and is less than 6 and not 0
+    4. followed by a new line
+
+```
+julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-last_digit.c -o 1-last_digit
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 629438752 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -748255693 is -3 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -1052791662 is -2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 491506926 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 954249937 is 7 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 652334952 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 809065140 is 0 and is 0
+julien@ubuntu:~/0x01$
+```
+
+* **File:** `1-last_digit.c`
+    
+### **2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game** :yum: :yum: :ok_hand:
 
 - Write a script that generates the assembly code of a C code and save it in an output file.
 
