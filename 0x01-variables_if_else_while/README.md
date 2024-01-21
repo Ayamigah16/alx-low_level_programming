@@ -1,4 +1,4 @@
-# 0x01-variables_if_else_while
+# 0x01-variables_if_else_while 🔥🔥
 `C`
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutiAkMJusI2Kbbu-MaNpUk4vv1Euo_eejADkM82o4N21-n1iT_R_XrVxk3USiuuJgoHk&usqp=CAU" alt="Image Alt Text" width="100%" height="500">
@@ -50,12 +50,12 @@
 * The variable n will store a different value every time you run this program
 * You don’t have to understand what **rand**, **srand**, **RAND_MAX** do. Please do not touch this code
 * The output of the program should be:
-    1. The string Last digit of, followed by
-    2. n, followed by
-    3. the string is, followed by
-        * if the last digit of n is greater than 5: the string and is greater than 5
-        * if the last digit of n is 0: the string and is 0
-        * if the last digit of n is less than 6 and not 0: the string and is less than 6 and not 0
+    1. The string **Last digit of**, followed by
+    2. **n**, followed by
+    3. the string **is**, followed by
+        * if the last digit of **n** is greater than 5: the string **and is greater than 5**
+        * if the last digit of **n** is 0: the string **and is 0**
+        * if the last digit of **n** is less than 6 and not 0: the string **and is less than 6 and not 0**
     4. followed by a new line
 
 ```
@@ -93,91 +93,39 @@ julien@ubuntu:~/0x01$
     
 ### **2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game** :yum: :yum: :ok_hand:
 
-- Write a script that generates the assembly code of a C code and save it in an output file.
+- Write a program that prints the alphabet in lowercase, followed by a new line.
 
-* The C file name will be saved in the variable **$CFILE**
-* The output file should be named the same as the C file, but with the extension **.s** instead of **.c**
+* You can only use the **putchar** function (every other function (**printf**, **puts**, **etc**…) is forbidden)
+* All your code should be in the **main** function
+* You can only use **putchar** twice in your code
 
 ```
-julien@ubuntu:~/c/0x00$ export CFILE=main.c
-julien@ubuntu:~/c/0x00$ cat main.c
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-    return (0);
-}
-julien@ubuntu:~/c/0x00$ ./2-assembler
-julien@ubuntu:~/c/0x00$ ls
-0-preprocessor  1-compiler  2-assembler c  main.c  main.s  Makefile
-julien@ubuntu:~/c/0x00$ cat main.s
-    .file   "main.c"
-    .text
-    .globl  main
-    .type   main, @function
-main:
-.LFB0:
-    .cfi_startproc
-    pushq   %rbp
-    .cfi_def_cfa_offset 16
-    .cfi_offset 6, -16
-    movq    %rsp, %rbp
-    .cfi_def_cfa_register 6
-    movl    $0, %eax
-    popq    %rbp
-    .cfi_def_cfa 7, 8
-    ret
-    .cfi_endproc
-.LFE0:
-    .size   main, .-main
-    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
-    .section    .note.GNU-stack,"",@progbits
-julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+    julien@ubuntu:~/0x01$ ./2-print_alphabet 
+    abcdefghijklmnopqrstuvwxyz
+    julien@ubuntu:~/0x01$
 ```
  
-* **File:** `2-assembler` 
+* **File:** `2-print_alphabet.c` 
     
-###  **3. Name** :smiley: :heart_on_fire:
+###  **3. alphABET** :smiley: :heart_on_fire:
 
-- Write a script that compiles a C file and creates an executable named **cisfun**.
-
-* The C file name will be saved in the variable **$CFILE**
+- Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
 
 ```
-    julien@ubuntu:~/c/0x00$ export CFILE=main.c
-    julien@ubuntu:~/c/0x00$ cat main.c
-    #include <stdio.h>
-
-    /**
-    * main - Entry point
-    *
-    * Return: Always 0 (Success)
-    */
-    int main(void)
-    {
-        return (0);
-    }
-    julien@ubuntu:~/c/0x00$ ./3-name 
-    julien@ubuntu:~/c/0x00$ ls
-    0-preprocessor  1-compiler   3-name  cisfun  main.o  Makefile
-    100-intel       2-assembler  c       main.c  main.s
-    julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-print_alphabets.c -o 3-print_alphabets
+    julien@ubuntu:~/0x01$ ./3-print_alphabets | cat -e
+    abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
+    julien@ubuntu:~/0x01$ 
 ```
 
-* **File:** `3-name`
+* **File:** `3-print_alphabets.c`
     
-###  **4. Hello, puts** :astronaut:
+###  **4. When I was having that alphabet soup, I never thought that it would pay off** :astronaut:
 
-- Write a C program that prints exactly ***"Programming is like building a multilingual puzzle,*** followed by a new line.
+- Write a program that prints the alphabet in lowercase, followed by a new line.
 
-* Use the function **puts**
-* You are not allowed to use **printf**
-* Your program should end with the value **0**
+* Print all the letters except **q** and **e**
 
 ```
     julien@ubuntu:~/c/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c && ./a.out
@@ -187,127 +135,127 @@ julien@ubuntu:~/c/0x00$
     julien@ubuntu:~/c/0x00$ 
 ```
  
-* **File:** `4-puts.c`
+* **File:** `4-print_alphabt.c`
     
-###  **5. Hello, printf** :heart_on_fire:
+###  **5. Numbers** :heart_on_fire:
 
-- Write a C program that prints exactly ***with proper grammar, but the outcome is a piece of art,***, followed by a new line.
-
-* Use the function **printf**
-* You are not allowed to use the function **puts**
-* Your program should return **0**
-* Your program should compile without warning when using the **-Wall** **gcc** option
+- Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
  
 ```
-    julien@ubuntu:~/c/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-printf.c
-    julien@ubuntu:~/c/0x00$ ./a.out 
-    with proper grammar, but the outcome is a piece of art,
-    julien@ubuntu:~/c/0x00$ echo $?
-    0
-    julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-print_numbers.c -o 5-print_numbers
+    julien@ubuntu:~/0x01$ ./5-print_numbers 
+    0123456789
+    julien@ubuntu:~/0x01$
 ```
-* **File:** `5-printf.c`
+* **File:** `5-print_numbers.c`
     
-###  **6. Size is not grandeur, and territory does not make a nation** :yum: :yum:
+###  **6. Numberz** :yum: :yum:
  
-- Write a C program that prints the size of various types on the computer it is compiled and run on.
-
-* You should produce the exact same output as in the example
-* Warnings are allowed
-* Your program should return **0**
+- Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
 
 ```
-    julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
-    julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
-    julien@ubuntu:~/c/0x00$ ./size32
-    Size of a char: 1 byte(s)
-    Size of an int: 4 byte(s)
-    Size of a long int: 4 byte(s)
-    Size of a long long int: 8 byte(s)
-    Size of a float: 4 byte(s)
-    julien@ubuntu:~/c/0x00$ ./size64
-    Size of a char: 1 byte(s)
-    Size of an int: 4 byte(s)
-    Size of a long int: 8 byte(s)
-    Size of a long long int: 8 byte(s)
-    Size of a float: 4 byte(s)
-    julien@ubuntu:~/c/0x00$ echo $?
-    0
-    julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-print_numberz.c -o 6-print_numberz
+    julien@ubuntu:~/0x01$ ./6-print_numberz 
+    0123456789
+    julien@ubuntu:~/0x01$
 ```
 
-* **File:** `6-size.c`
+* **File:** `6-print_numberz.c`
     
-### **7. Intel** :yum: :yum: :butterfly:
+### **7. Smile in the mirror** :yum: :yum: :butterfly:
  
-- Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
-
-* The C file name will be saved in the variable **$CFILE**.
-* The output file should be named the same as the C file, but with the extension **.s** instead of **.c**
+- Write a program that prints the lowercase alphabet in reverse, followed by a new line.
 
 ```
-    julien@ubuntu:~/c/0x00$ export CFILE=main.c
-    julien@ubuntu:~/c/0x00$ cat main.c
-    #include <stdio.h>
-
-    /**
-    * main - Entry point
-    *
-    * Return: Always 0 (Success)
-    */
-    int main(void)
-    {
-        return (0);
-    }
-    julien@ubuntu:~/c/0x00$ ./100-intel 
-    julien@ubuntu:~/c/0x00$ cat main.s
-        .file   "main.c"
-        .intel_syntax noprefix
-        .text
-        .globl  main
-        .type   main, @function
-    main:
-    .LFB0:
-        .cfi_startproc
-        push    rbp
-        .cfi_def_cfa_offset 16
-        .cfi_offset 6, -16
-        mov rbp, rsp
-        .cfi_def_cfa_register 6
-        mov eax, 0
-        pop rbp
-        .cfi_def_cfa 7, 8
-        ret
-        .cfi_endproc
-    .LFE0:
-        .size   main, .-main
-        .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
-        .section    .note.GNU-stack,"",@progbits
-    julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-print_tebahpla.c -o 7-print_tebahpla
+    julien@ubuntu:~/0x01$ ./7-print_tebahpla
+    zyxwvutsrqponmlkjihgfedcba
+    julien@ubuntu:~/0x01$
 ```
 
-* **File:** `100-intel`
+* **File:** `7-print_tebahpla.c`
 
-### **8. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity** :clap: :clap:
+### **8. Hexadecimal** 🎯🎯
  
-- Write a C program that prints exactly ***and that piece of art is useful" - Dora Korpar, 2015-10-19,*** followed by a new line, to the standard error.
-
-* You are not allowed to use any functions listed in the NAME section of the man (3) **printf** or man (3) **puts**
-* Your program should return **1**
-* Your program should compile without any warnings when using the **-Wall** **gcc** option
+- Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
 
 ```
-    julien@ubuntu:~/c/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o quote 101-quote.c
-    julien@ubuntu:~/c/0x00$ ./quote
-    and that piece of art is useful" - Dora Korpar, 2015-10-19
-    julien@ubuntu:~/c/0x00$ echo $?
-    1
-    julien@ubuntu:~/c/0x00$ ./quote 2> q
-    julien@ubuntu:~/c/0x00$ cat q
-    and that piece of art is useful" - Dora Korpar, 2015-10-19
-    julien@ubuntu:~/c/0x00$ grep printf < 101-quote.c
-    julien@ubuntu:~/c/0x00$ grep put < 101-quote.c
-    julien@ubuntu:~/c/0x00$ 
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-print_base16.c -o 8-print_base16
+    julien@ubuntu:~/0x01$ ./8-print_base16
+    0123456789abcdef
+    julien@ubuntu:~/0x01$
 ```
 
-* **File:** `101-quote.c`
+* **File:** `8-print_base16.c`
+
+### **9. Patience, persistence and perspiration make an unbeatable combination for success** 🌟🌟🌟🌟🌟🌟
+ 
+- Write a program that prints all possible combinations of single-digit numbers.
+
+* Numbers must be separated by ,, followed by a space
+* Numbers should be printed in ascending order
+
+```
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
+    julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
+    julien@ubuntu:~/0x01$ 
+```
+
+* **File:** `9-print_comb.c`
+
+### **10. Inventing is a combination of brains and materials. The more brains you use, the less material you need** 🚀🚀🦾
+ 
+- Write a program that prints all possible different combinations of two digits.
+
+* Numbers must be separated by ,, followed by a space
+* The two digits must be different
+* **01** and **10** are considered the same combination of the two digits 0 and 1
+* Print only the smallest combination of two digits
+* Numbers should be printed in ascending order, with two digits
+
+```
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-print_comb3.c -o 100-print_comb3
+    julien@ubuntu:~/0x01$ ./100-print_comb3
+    01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
+    julien@ubuntu:~/0x01$ 
+```
+
+* **File:** `100-print_comb3.c`
+
+### **11. The success combination in business is: Do what you do better... and: do more of what you do...** ❤️‍🔥
+ 
+- Write a program that prints all possible different combinations of three digits.
+
+* Numbers must be separated by ,, followed by a space
+* The three digits must be different
+* **012**, **120**, **102**, **021**, **201**, **210** are considered the same combination of the three digits **0**, **1** and **2**
+* Print only the smallest combination of three digits
+* Numbers should be printed in ascending order, with three digits
+
+```
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-print_comb4.c -o 101-print_comb4
+    julien@ubuntu:~/0x01$ ./101-print_comb4
+    012, 013, 014, 015, 016, 017, 018, 019, 023, 024, 025, 026, 027, 028, 029, 034, 035, 036, 037, 038, 039, 045, 046, 047, 048, 049, 056, 057, 058, 059, 067, 068, 069, 078, 079, 089, 123, 124, 125, 126, 127, 128, 129, 134, 135, 136, 137, 138, 139, 145, 146, 147, 148, 149, 156, 157, 158, 159, 167, 168, 169, 178, 179, 189, 234, 235, 236, 237, 238, 239, 245, 246, 247, 248, 249, 256, 257, 258, 259, 267, 268, 269, 278, 279, 289, 345, 346, 347, 348, 349, 356, 357, 358, 359, 367, 368, 369, 378, 379, 389, 456, 457, 458, 459, 467, 468, 469, 478, 479, 489, 567, 568, 569, 578, 579, 589, 678, 679, 689, 789
+    julien@ubuntu:~/0x01$ 
+```
+
+* **File:** `101-print_comb4.c`
+
+### **12. Software is eating the World** 🧑‍💻
+ 
+- Write a program that prints all possible combinations of two two-digit numbers.
+
+* The numbers should range from 0 to 99
+* The two numbers should be separated by a space
+* All numbers should be printed with two digits. 1 should be printed as 01
+* The combination of numbers must be separated by comma, followed by a space
+* The combinations of numbers should be printed in ascending order
+
+```
+    julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 102-print_comb5.c -o 102-print_comb5
+    julien@ubuntu:~/0x01$ ./102-print_comb5
+    00 01, 00 02, 00 03, 00 04, 00 05, 00 06, 00 07, 00 08, 00 09, 00 10, 00 11, [...] 40 91, 40 92, 40 93, 40 94, 40 95, 40 96, 40 97, 40 98, 40 99, 41 42, 41 43, 41 44, 41 45, 41 46, 41 47, 41 48, 41 49, 41 50, 41 51, 41 52, 41 53 [...] 93 95, 93 96, 93 97, 93 98, 93 99, 94 95, 94 96, 94 97, 94 98, 94 99, 95 96, 95 97, 95 98, 95 99, 96 97, 96 98, 96 99, 97 98, 97 99, 98 99
+```
+
+* **File:** `102-print_comb5.c`
