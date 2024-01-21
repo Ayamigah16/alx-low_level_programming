@@ -1,7 +1,7 @@
-# 0x00. C - Hello, World
+# 0x01-variables_if_else_while
 `C`
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutiAkMJusI2Kbbu-MaNpUk4vv1Euo_eejADkM82o4N21-n1iT_R_XrVxk3USiuuJgoHk&usqp=CAU" alt="Image Alt Text" width="300" height="200">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutiAkMJusI2Kbbu-MaNpUk4vv1Euo_eejADkM82o4N21-n1iT_R_XrVxk3USiuuJgoHk&usqp=CAU" alt="Image Alt Text" width="100%" height="500">
  
 ## Tasks
 
